@@ -12,11 +12,11 @@ permalink: /blog/
         {% include post-header.html %}<hr>
         <!-- <img src="https://luymm.com/usr/uploads/2018/12/2888240706.gif" alt="哈哈哈哈哈"> -->
         <div class="post-content mini-postcontent">
-            {{ page.content | strip_html | truncate:200 }}
+            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.content | strip_html | truncate:150 }}</a>
         </div>
-        <div class="post-button">
+        <!-- <div class="post-button">
             <a class="btn btn-info" href="{{ page.url | prepend: site.baseurl }}">阅读全文</a>
-        </div>
+        </div> -->
     </article>
 {% endfor %}
 

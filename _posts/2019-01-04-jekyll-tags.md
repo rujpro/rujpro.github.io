@@ -3,7 +3,6 @@ layout: post
 title: "使用Jekyll（没有插件）为每个标签/类别分隔页面"
 header-style: text
 article-tags: 技术分享
-catalog: false
 musicId: 569213220
 tags:
   - jekyll

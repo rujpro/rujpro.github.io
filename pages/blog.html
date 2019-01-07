@@ -14,9 +14,9 @@ permalink: /blog/
         <div class="post-content mini-postcontent">
             <a href="{{ page.url | prepend: site.baseurl }}">{{ page.content | strip_html | truncate:150 }}</a>
         </div>
-        <!-- <div class="post-button">
+        <div class="post-button">
             <a class="btn btn-info" href="{{ page.url | prepend: site.baseurl }}">阅读全文</a>
-        </div> -->
+        </div>
     </article>
 {% endfor %}
 

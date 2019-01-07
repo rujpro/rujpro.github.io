@@ -648,7 +648,9 @@ pre.highlight {
 .sidebar-container .short-about .list-inline {
   margin-left: 7px;
 }
-
+@media screen and (max-width: 1200px) {
+  .sidebar-container .short-about .list-inline .fa-lg{font-size: 1em;}
+}
 img.shadow {
   box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
 }

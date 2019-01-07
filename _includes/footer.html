@@ -89,17 +89,4 @@ $(function () { $("[data-toggle='tooltip']").tooltip(); });
     })();
 </script>
 {% endif %}
-<!-- Side Catalog -->
-<script>
-    /*
-     * Doc: https://github.com/ghiculescu/jekyll-table-of-contents
-     * Fork by Ruj to support padding
-     */
-    async("{{ '/assets/js/lib/toc.js' | prepend: site.baseurl }}", function () {
-        $(document).ready(function() {
-            $('#toc').toc();
-            $('#catarlog').attr({"data-spy":"affix","data-offset-top":"618"});
-        });
-        $('body').attr({"data-spy":"scroll","data-target":"#toc","data-offset":"20"});
-    });
-</script>
+

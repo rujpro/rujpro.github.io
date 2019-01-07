@@ -63,7 +63,7 @@ layout: default
                 <!-- Friends link -->
                 {% include friends.html %}
                 <!-- catalog show -->
-                {%  if page.catalog %}
+                {%  if site.catalog %}
                 {% include catalog.html %}
                 {%  endif %}
             </div>
@@ -75,13 +75,22 @@ layout: default
   {% include mathjax_support.html %}
 {% endif %}
 <!-- Side Catalog -->
-<script src="{{ "/assets/js/lib/md-toc.min.js " | prepend: site.baseurl }}"></script>
-<script type="text/javascript">
-    new Toc('post', {
-        'level': 3,
-        'top': 100,
-        'class': 'nav',
-        'targetId': 'toc'
+<!-- /*
+* Doc: https://github.com/ghiculescu/jekyll-table-of-contents
+* Fork by Ruj to support padding
+*/ -->
+<script src="{{ "/assets/js/lib/toc.js " | prepend: site.baseurl }}"></script>
+<script>
+    $(document).ready(function() {
+        $('#toc').toc();
+        $('#catarlog').attr({"data-spy":"affix","data-offset-top":"618"});
+        //var tags= [h1,h2,h3,h4,h5,h6];
+        if($('.post-content').find("h2")){
+            $("#catarlog").show();
+        }else{
+            $("#catarlog").hide();
+        }
     });
+    $('body').attr({"data-spy":"scroll","data-target":"#toc","data-offset":"20"});
 </script>
 

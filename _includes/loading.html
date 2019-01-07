@@ -17,6 +17,7 @@
         setTimeout(function () {
           /* fade out the loading icon */
           $(".home-loading").hide(0).removeClass('home-loading-off');
+          $(".loader_overlay").hide(0);
           $("html").removeClass('html-onload');
         }, 500);
       }
@@ -352,7 +353,7 @@
 <script src="{{ "/assets/js/ruj-blog.js " | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/canvas.js " | prepend: site.baseurl }}"></script>
 <!-- canvas + h5 + webgl 水波纹效果 -->
-<script src="{{ "/assets/js/lib/jquery.ripples.min.js " | prepend: site.baseurl }}"></script>
+<!-- <script src="{{ "/assets/js/lib/jquery.ripples.min.js " | prepend: site.baseurl }}"></script> -->
 {% endif %}
 
 {% if include.type == 'page' %}

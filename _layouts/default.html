@@ -3,9 +3,36 @@
 {% include head.html %}
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
-    {% include loading.html type='page' %}
-    {% include nav.html %}
-    {{ content }}
-    {% include footer.html %}
+    <div class="main-wrap">
+        {% include loading.html type='page' %}
+        {% include nav.html %}
+        {{ content }}
+        {% include footer.html %}
+    </div>
+    <div class="search">
+        <button id="btn-search-close" class="btn btn--search-close" aria-label="Close search form"><svg class="icon icon--cross">
+                <use xlink:href="#icon-cross"></use>
+            </svg></button>
+        <form class="search__form" action="">
+            <div id="search-container">
+                <input id="search-input" class="search__input" name="search" type="search" placeholder="search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                <span class="search__info">Hit enter to search or ESC to close</span>
+                <ol id="results-container"></ol>
+            </div>
+        </form>
+    </div><!-- /search -->
+    <script src="/assets/js/demo3.js"></script>
+    <script src="{{ "/assets/js/lib/simple-jekyll-search.min.js " | prepend: site.baseurl }}"></script>
+    <script>
+        SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '/search.json',
+            searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a></li>', // 文章列表模板
+            noResultsText: '没有搜索到文章', // 无搜索数据提示语
+            limit: 10, // 返回最大文章数
+            fuzzy: false // 是否模糊匹配
+        })
+    </script>
 </body>
 </html>

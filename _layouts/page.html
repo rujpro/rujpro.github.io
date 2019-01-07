@@ -17,14 +17,6 @@ layout: default
     		</div>
     <!-- Sidebar Container -->
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar-container">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div id="search-container">
-                            <input type="text" id="search-input" placeholder="search...">
-                            <ol id="results-container"></ol>
-                        </div>
-                    </div>
-                </div>
                 <!-- Short About -->
                 {% include short-about.html %}
                 <!-- Friends link -->
@@ -32,15 +24,3 @@ layout: default
     		</div>
 	</div>
 </div>
-<script src="{{ "/assets/js/lib/simple-jekyll-search.min.js " | prepend: site.baseurl }}"></script>
-<script>
-        SimpleJekyllSearch({
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('results-container'),
-            json: '/search.json',
-            searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a></li>', // 文章列表模板
-            noResultsText: '没有搜索到文章', // 无搜索数据提示语
-            limit: 10, // 返回最大文章数
-            fuzzy: false // 是否模糊匹配
-        })
-</script>

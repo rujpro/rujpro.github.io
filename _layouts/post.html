@@ -84,12 +84,6 @@ layout: default
     $(document).ready(function() {
         $('#toc').toc();
         $('#catarlog').attr({"data-spy":"affix","data-offset-top":"618"});
-        //var tags= [h1,h2,h3,h4,h5,h6];
-        if($('.post-content').find("h2")){
-            $("#catarlog").show();
-        }else{
-            $("#catarlog").hide();
-        }
     });
     $('body').attr({"data-spy":"scroll","data-target":"#toc","data-offset":"20"});
 </script>

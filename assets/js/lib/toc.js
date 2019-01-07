@@ -16,7 +16,7 @@
       settings = $.extend(defaults, options);
   
       function fixedEncodeURIComponent (str) {
-        return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+        return decodeURIComponent(str).replace(/[!'()*]/g, function(c) {
           return '%' + c.charCodeAt(0).toString(16);
         });
       }

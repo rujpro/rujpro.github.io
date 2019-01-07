@@ -74,14 +74,3 @@ layout: default
 {% if page.mathjax %}
   {% include mathjax_support.html %}
 {% endif %}
-<!-- Side Catalog -->
-<script src="{{ "/assets/js/lib/md-toc.min.js " | prepend: site.baseurl }}"></script>
-<script type="text/javascript">
-    new Toc('post', {
-        'level': 3,
-        'top': 100,
-        'class': 'nav',
-        'targetId': 'toc'
-    });
-</script>
-

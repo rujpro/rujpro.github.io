@@ -14,7 +14,15 @@ permalink: /about/
         width: 100%;
         text-align: center;
     }
-
+    @media screen and (max-width: 992px){
+        #catarlog{display: none;}
+        .page-about-content {padding: 0 !important;}
+        .page-about-content .item-hd span{margin-right: 20px !important;}
+        .page-about-content .section-content,.page-about-content .person .info div{font-size: 12px !important;}
+        .page-about-content .person {
+            margin-left: 14px !important;
+        }
+      }
     .page-about-content {
         background: #fff;
         overflow: hidden;
@@ -65,14 +73,13 @@ permalink: /about/
     }
 
     .page-about-content .person .ml {
-        margin-left: 100px
+        float: right;
     }
 
     .page-about-content .section-hd {
         position: relative;
         height: 32px;
         margin: 20px auto;
-        overflow: hidden
     }
 
     .page-about-content .section-hd .section-title {

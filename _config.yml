@@ -14,14 +14,14 @@ collections:
 
 # Build settings
 markdown: kramdown
-kramdown:
-    extensions:
-      - generate_toc
 plugins:
   - jekyll-feed
 
 # Publish posts or collection documents with a future date.
 future: false
+
+# catalog settings
+catalog: true
 
 # Sidebar settings
 sidebar-about-description: "Stay hungry,Stay foolish"
@@ -47,7 +47,7 @@ metingJs: true    # Open APlayer
 # SNS settings
 RSS: false
 weibo_username:     rujpro
-zhihu_username:     rujpro
+kaiyuan_username:   Jackcrj
 github_username:    rujpro
 twitter_username:   rujpro
 

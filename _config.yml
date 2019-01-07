@@ -1,0 +1,71 @@
+# Welcome to Jekyll!
+title: Ruj Blog
+SEOTitle: 陈锐军的博客 | Ruj Blog
+email: luckyerchen@gmail.com
+header-img: assets/img/home-bg.jpg
+description: "关于程序与设计、黑客与画家 | Ruj，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @陈锐军 的个人博客，与你一起发现更大的世界。"
+keyword: "陈锐军, chenruijun, 博客, Blog, 个人博客, 个人网站, 互联网, Web, JavaScript, web前端, 设计, 全栈, 前端开发"
+url: "https://rujpro.github.io/"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+collections:
+  authors:
+    output: true
+
+# Build settings
+markdown: kramdown
+kramdown:
+    extensions:
+      - generate_toc
+plugins:
+  - jekyll-feed
+
+# Publish posts or collection documents with a future date.
+future: false
+
+# Sidebar settings
+sidebar-about-description: "Stay hungry,Stay foolish"
+sidebar-avatar: /assets/img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+# comments start
+valine_comment:
+  enable: true
+  leancloud_appid: 09Ce1bvJ8Ngu3RWx2VmmsvxA-gzGzoHsz    # app_id
+  leancloud_appkey: Tk9kp5BicHktdafxBr6ms48R            # app_key
+  placeholder: "大牛，别默默的看了，快帮我点评一下吧！:)"   # placeholde
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+metingJs: true    # Open APlayer
+# SNS settings
+RSS: false
+weibo_username:     rujpro
+zhihu_username:     rujpro
+github_username:    rujpro
+twitter_username:   rujpro
+
+# friends
+friends: [{
+        title: "Github",
+        href: "https://github.com/"
+    },{
+        title: "开源中国",
+        href: "https://www.oschina.net/"
+    },{
+        title: "CSDN",
+        href: "https://www.csdn.net/"
+    },{
+        title: "掘金",
+        href: "https://juejin.im/"
+    },{
+        title: "阿里云教程中心",
+        href: "https://www.aliyun.com/jiaocheng/?spm=5176.100033.9.2.6cde79b3fD5iZU"
+    }
+]

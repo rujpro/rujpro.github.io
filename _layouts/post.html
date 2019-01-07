@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 post-container">
+                <div class="post-preview">
+                    <!-- post-header -->
+                    {% include post-header.html %}<hr>
+                    <!-- require APlayer -->
+                    {% if page.musicId %}
+                    {% include aplayer.html %}<br>
+                    {% endif %}
+                    <!-- <img src="https://luymm.com/usr/uploads/2018/12/2888240706.gif" alt="哈哈哈哈哈"> -->
+                    <div class="post-content">
+                        {{ content }}
+                    </div>
+                    <div class="post-button">
+                        <button class="btn btn-info">点赞</button>
+                    </div>
+                    <!-- 下一文章 -->
+                    <hr>
+                    <ul class="page">
+                        {% if page.previous.url %}
+                        <li class="previous">
+                            <i class="fa fa-angle-left"></i>
+                            <span>上一篇：</span>
+                            <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
+                            {{ page.previous.title | strip_html | truncate:25 }}
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if page.next.url %}
+                        <li class="next">
+                            <span>下一篇：</span>
+                            <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
+                            {{ page.next.title | strip_html | truncate:25 }}
+                            </a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        评论
+                    </div>
+                    <div class="panel-body">
+                        {% if site.valine_comment.enable %}
+                            <div id="Comment"></div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>  
+            <!-- Sidebar Container -->
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar-container" style="margin-top:60px;">
+                <!-- Short About -->
+                {% include short-about.html %}
+                <!-- Friends link -->
+                {% include friends.html %}
+                <!-- catalog show -->
+                {%  if page.catalog %}
+                {% include catalog.html %}
+                {%  endif %}
+            </div>
+        </div>
+    </div>
+</article>
+<!-- add support for mathjax by voleking-->
+{% if page.mathjax %}
+  {% include mathjax_support.html %}
+{% endif %}
+<!-- Side Catalog -->
+<script src="{{ "/assets/js/lib/md-toc.min.js " | prepend: site.baseurl }}"></script>
+<script type="text/javascript">
+    new Toc('post', {
+        'level': 3,
+        'top': 100,
+        'class': 'nav',
+        'targetId': 'toc'
+    });
+</script>
+

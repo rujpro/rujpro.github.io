@@ -1,0 +1,12 @@
+- name: Home
+  link: /
+- name: Blog
+  link: /blog/
+- name: 归档
+  link: /archive/
+- name: 技术
+  link: /course.html
+- name: 旅行
+  link: /travel.html
+- name: About
+  link: /about/

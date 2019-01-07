@@ -1,0 +1,22 @@
+<div class="post-badge">
+    <a data-toggle="tooltip" data-placement="top" title="分类" href="{{ site.baseurl }}/archive/">{{page.article-tags }}</a>
+</div>
+<header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+        <span><i class="fa fa-clock-o"></i> 发布于<time>{{ page.date | date: "%Y-%m-%d" }}</time></span>
+        <span id="{{ site.baseurl }}{{ page.url }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
+            <i class="fa fa-eye"></i> <em style="font-style: normal;" class="post-meta-item-text">浏览量 </em>
+            <i style="font-style: normal;" class="leancloud-visitors-count">0</i>
+        </span>
+        <!-- <span><a href=""><i class="fa fa-comments-o"></i> 没有评论</a></span> -->
+        <span><a href=""><i class="fa fa-bar-chart"></i> 字数（{{ page.content | strip_html | strip_newlines | split: "" |
+                size }}）</a></span>
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            {% for tag in page.tags %}
+            <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</header>

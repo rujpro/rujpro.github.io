@@ -1,0 +1,37 @@
+---
+layout: page
+title: "Blog"
+subtitle: "放空自己，让想象飞一会儿"
+header-img: "assets/img/blog-bg.jpg"
+permalink: /blog/
+---
+
+{% for page in site.posts %}
+    <article class="post-preview">
+        <!-- post-header -->
+        {% include post-header.html %}<hr>
+        <!-- <img src="https://luymm.com/usr/uploads/2018/12/2888240706.gif" alt="哈哈哈哈哈"> -->
+        <div class="post-content mini-postcontent">
+            {{ page.content | strip_html | truncate:200 }}
+        </div>
+        <div class="post-button">
+            <a class="btn btn-info" href="{{ page.url | prepend: site.baseurl }}">阅读全文</a>
+        </div>
+    </article>
+{% endfor %}
+
+<!-- Pager -->
+{% if site.total_pages > 1 %}
+<ul class="pager">
+    {% if site.previous_page %}
+    <li class="previous">
+        <a href="{{ site.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if site.next_page %}
+    <li class="next">
+        <a href="{{ site.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}

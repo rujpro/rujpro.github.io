@@ -78,9 +78,10 @@ $(function () { $("[data-toggle='tooltip']").tooltip(); });
     })();
 </script>
 {% endif %}
-<!-- Side Catalog -->
+
+{% if post.type == 'post' %}
 <script>
-    /*
+    /* Side Catalog
      * Doc: https://github.com/ghiculescu/jekyll-table-of-contents
      * Fork by Ruj to support padding
      */
@@ -92,7 +93,7 @@ $(function () { $("[data-toggle='tooltip']").tooltip(); });
         $('body').attr({"data-spy":"scroll","data-target":"#toc","data-offset":"20"});
     });
 </script>
-
+{% endif %}
 <!-- <script>
     $(document).ready(function() {
         $('#toc').toc();

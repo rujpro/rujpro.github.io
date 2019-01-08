@@ -149,7 +149,7 @@ img::-webkit-selection {
   text-align: center;
 }
 
-.js .search {
+.search {
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -159,7 +159,7 @@ img::-webkit-selection {
   height: 50vh;
 }
 
-.js .btn--search-close {
+.btn--search-close {
   display: block;
 }
 
@@ -206,7 +206,8 @@ img::-webkit-selection {
 .search__input::-ms-clear {
   display: none;
 }
-
+#results-container,#results-container>li>a{color: #fff;}
+#results-container>li>a:hover{color: #ff3f1a;}
 .search__info {
   font-size: 90%;
   font-weight: bold;
@@ -221,24 +222,30 @@ img::-webkit-selection {
 /************************/
 /* Transitions 			*/
 /************************/
-
-.js .main-wrap {
+.mainbody {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-10deg, #d80afd 0%, #341498 100%);
+  overflow-y: hidden;
+    overflow-x: hidden;
+}
+.main-wrap {
   transform: perspective(1000px);
   transition: transform 0.6s;
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-.js .main-wrap--move {
+.main-wrap--move {
   transform: perspective(1000px) translate3d(0, 50vh, 0) rotate3d(1, 0, 0, 30deg);
 }
 
-.js .search {
+.search {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.6s;
 }
 
-.js .search--open {
+.search--open {
   pointer-events: auto;
   opacity: 1;
 }
@@ -257,14 +264,14 @@ img::-webkit-selection {
 }
 
 /* Search form with input and description */
-.js .search__form {
+.search__form {
   opacity: 0;
   transform: scale3d(0.7, 0.7, 1);
   transition: opacity 0.6s, transform 0.6s;
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-.js .search--open .search__form {
+.search--open .search__form {
   opacity: 1;
   transform: scale3d(1, 1, 1);
 }
@@ -1097,8 +1104,9 @@ code,kbd,pre,samp {
   .navbar-custom.is-fixed .navbar-brand:focus {
     color: #00a7e0;
   }
-  .navbar-custom.is-fixed .nav li a {
-    color: #404040;
+  .navbar-custom.is-fixed .nav li a,
+  .navbar-custom.is-fixed .nav li svg {
+    color: #404040 !important;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {

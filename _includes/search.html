@@ -1,0 +1,25 @@
+<div class="search">
+    <svg id="btn-search-close" class="btn--search-close">
+        <use xlink:href="#icon-cross"></use>
+    </svg>
+    <form class="search__form" action="">
+        <div id="search-container">
+            <input id="search-input" class="search__input" name="search" type="search" placeholder="search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <span class="search__info">按Enter键搜索或按Esc键关闭</span>
+            <ol id="results-container"></ol>
+        </div>
+    </form>
+</div><!-- /search -->
+<script src="/assets/js/demo3.js"></script>
+<script src="{{ "/assets/js/lib/simple-jekyll-search.min.js " | prepend: site.baseurl }}"></script>
+<script>
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a></li>', // 文章列表模板
+        noResultsText: '没有搜索到文章', // 无搜索数据提示语
+        limit: 10, // 返回最大文章数
+        fuzzy: false // 是否模糊匹配
+    })
+</script>

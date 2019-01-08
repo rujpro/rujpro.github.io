@@ -36,16 +36,15 @@
             </button>
             <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div id="rujblog_navbar">
             <div class="navbar-collapse">
-                <button id="btn-search" class="btn btn--search">
-                    <svg class="icon icon--search">
-                        <use xlink:href="#icon-search"></use>
-                    </svg>
-                </button>
                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <svg id="btn-search">
+                            <use xlink:href="#icon-search"></use>
+                        </svg>
+                    </li>
                     {% for item in site.data.navigation %}
                     <li>
                         <a href="{{ item.link }}" {% if page.url==item.link %} class="active" {% endif %}>{{ item.name }}</a>

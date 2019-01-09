@@ -15,6 +15,9 @@
     </div>
 </footer>
 {% include valine.html %}
+{% if page.layout == 'home' %}
+<script src="{{ "/assets/js/canvas.js " | prepend: site.baseurl }}"></script>
+{% endif %}
 <!-- Bootstrap Core JavaScript -->
 <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script>
@@ -48,7 +51,7 @@ $(function () { $("[data-toggle='tooltip']").tooltip(); });
 <!-- Google Analytics -->
 {% if site.ga_track_id %}
 <script>
-    // dynamic User by Hux
+    // dynamic User by Ruj
     var _gaId = '{{ site.ga_track_id }}';
     var _gaDomain = '{{ site.ga_domain }}';
 
@@ -65,7 +68,7 @@ $(function () { $("[data-toggle='tooltip']").tooltip(); });
 <!-- Baidu Tongji -->
 {% if site.ba_track_id %}
 <script>
-    // dynamic User by Hux
+    // dynamic User by Ruj
     var _baId = '{{ site.ba_track_id }}';
 
     // Originial
@@ -78,8 +81,7 @@ $(function () { $("[data-toggle='tooltip']").tooltip(); });
     })();
 </script>
 {% endif %}
-
-{% if post.type == 'post' %}
+{% if page.layout == 'post' %}
 <script>
     /* Side Catalog
      * Doc: https://github.com/ghiculescu/jekyll-table-of-contents

@@ -1,12 +1,6 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2016, Codrops
- * http://www.codrops.com
+/*!
+ * Ruj Blog v1.0.0 (http://rujpro.github.io)
+ * Copyright 2018 Ruj <luckyerchen@gmail.com>
  */
 ;(function (window) {
 	'use strict';

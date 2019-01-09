@@ -20,11 +20,12 @@ type: post
                     <div class="post-content">
                         {{ content }}
                     </div>
+                    <hr>
                     <div class="post-button">
-                        <button class="btn btn-info">点赞</button>
+                        <a class="waves-effect">赏</a>
                     </div>
                     <!-- 下一文章 -->
-                    <hr>
+                    {% include share.html %}
                     <ul class="page">
                         {% if page.previous.url %}
                         <li class="previous">

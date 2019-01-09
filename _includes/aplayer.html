@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+<link rel="stylesheet" href="/assets/css/APlayer.min.css">
+<script src="/assets/js/lib/APlayer.min.js"></script>
+<script src="/assets/js/lib/Meting.min.js"></script>
 <div class="aplayer"
     data-id="{{ page.musicId }}"
     data-server="netease"
     data-type="song"
     data-fixed="false" 
-    data-autoplay="false"
+    data-autoplay="{{ page.autoplay }}"
     data-volume="0.5"
     data-mini="false" >
 </div><br>

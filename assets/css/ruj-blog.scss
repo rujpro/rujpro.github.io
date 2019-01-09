@@ -23,7 +23,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   font-size: 14px;
-  color: #000;
+  color: #404040;
   overflow-x: hidden;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -224,7 +224,7 @@ img::-webkit-selection {
     overflow-x: hidden;
 }
 .main-wrap {
-  transform: perspective(1000px);
+  // transform: perspective(1000px);
   transition: transform 0.6s;
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
@@ -810,6 +810,7 @@ pre.highlight {
 }
 .sidebar-container .tags a {
   border-color: #bfbfbf;
+  color: #333;
 }
 .sidebar-container .tags a:hover,
 .sidebar-container .tags a:active {
@@ -1035,7 +1036,9 @@ code,kbd,pre,samp {
     background: none;
   }
 }
-
+.navbar-custom.invert #btn-search {
+  color: #404040;
+}
 .navbar-custom.invert .navbar-toggle:active {
   background-color: rgba(0, 0, 0, 0.05);
 }
@@ -1053,8 +1056,9 @@ code,kbd,pre,samp {
   color: #404040;
 }
 .navbar-custom.invert .nav li a:hover,
-.navbar-custom.invert .nav li a:focus {
-  color: #00a7e0;
+.navbar-custom.invert .nav li a:focus,
+.navbar-custom.invert #btn-search:hover {
+  color: #00a7e0 !important;
 }
 @media only screen and (min-width: 1170px) {
   .navbar-custom {
@@ -1080,6 +1084,7 @@ code,kbd,pre,samp {
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
+    transform: perspective(-1000px);
   }
   .navbar-custom.is-fixed .navbar-brand {
     color: #404040;

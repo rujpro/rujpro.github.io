@@ -41,7 +41,7 @@ layout: default
 {% endfor %}
 </ul>
 ```
-布局文件只是从页面的[YAML前端](http://jekyllcn.com/docs/variables/)的变量中提取标记的名称，使用该标记循环所有帖子并显示指向它们的链接列表。
+布局文件只是从页面的[YAML前端](http://jekyllrb.com/docs/variables/)的变量中提取标记的名称，使用该标记循环所有帖子并显示指向它们的链接列表。
 
 ---
 

@@ -9,8 +9,9 @@ url: "https://rujpro.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 collections:
-  authors:
+  my_collection:
     output: true
+    permalink: /:collection/:name
 
 # Build settings
 markdown: kramdown

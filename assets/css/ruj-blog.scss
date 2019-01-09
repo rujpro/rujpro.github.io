@@ -47,7 +47,6 @@ a:hover,a:focus {
   color: #00a7e0;
   text-decoration: none;
   outline: none;
-  border: 0;
 }
 ::-webkit-selection {
   color: white;
@@ -77,11 +76,6 @@ img::-webkit-selection {
   background: transparent;
 }
 // seach css
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
 .main-wrap {
   display: flex;
   flex-direction: column;
@@ -593,11 +587,14 @@ pre.highlight {
 	}
 }
 .home{
-  background: url('/assets/img/urban.jpg') no-repeat !important;
+  background: url('/assets/img/urban.jpg') no-repeat;
   height: 100%;
   // background: linear-gradient(120deg, #cd4646, #ef6767);
   background-size: cover;
   background-position: 50% 0;
+}
+.home #btn-search {
+  display: none;
 }
 .ruj-wrap{
   background:rgba(0, 0, 0, .5);
@@ -1005,21 +1002,7 @@ code,kbd,pre,samp {
   line-height: 20px;
   letter-spacing: 1px;
 }
-// .navbar-custom .nav li a:after {
-//   display: block;
-//   position: absolute;
-//   left: 0;
-//   bottom: -1px;
-//   width: 0;
-//   height: 2px;
-//   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
-//   content: "";
-//   transition: width 0.2s;
-// }
-// .navbar-custom .nav li a:hover:after,
-// .navbar-custom .nav li a.active:after {
-//   width: 100%;
-// }
+
 .navbar-custom .nav li a.active {
   color: #00a7e0;
 }
@@ -1091,6 +1074,7 @@ code,kbd,pre,samp {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
     top: -61px;
+    z-index: 9999;
     background-color: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid #f2f2f2;
     -webkit-transition: -webkit-transform 0.3s;

@@ -151,7 +151,9 @@ img::-webkit-selection {
   }
 }
 @media screen and (max-width: 768px) {
-  #myModal .modal-dialog{transform: translate(-50%,-50%);top: 50%;left: 50%;}
+  #myModal .modal-dialog{transform: translate(-50%,-50%);top: 50%;left: 50%;margin: 0px;}
+  #myModal .modal-dialog .nav-tabs>li{margin-bottom: -2px;}
+  .main-wrap{display: inherit;}
 }
 .search {
   position: fixed;
@@ -604,7 +606,7 @@ pre.highlight {
   background-position: 50% 0;
 }
 .home #btn-search,
-.home footer {
+.home .footer {
   display: none;
 }
 .ruj-wrap{
@@ -969,6 +971,7 @@ code,kbd,pre,samp {
     transition: opacity 100ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
     -webkit-transition: opacity 100ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
   }
+  #rujblog_navbar li:nth-child(1){display: none;}
   #rujblog_navbar.in {
     transform: scaleX(1);
     -webkit-transform: scaleX(1);
@@ -1423,29 +1426,29 @@ code,kbd,pre,samp {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-footer {
+.footer {
   font-size: 20px;
   padding: 25px 0;
   background-color: #2d2d2dfa;
   margin-bottom: -27px;
   width: 100%;
 }
-footer .list-inline {
+.footer .list-inline {
   margin: 0;
   padding: 0;
 }
-footer .list-inline .fa-lg{font-size: 1.1em;}
-footer .copyright {
+.footer .list-inline .fa-lg{font-size: 1.1em;}
+.footer .copyright {
   font-size: 14px;
   text-align: center;
   margin: 10px auto auto 0;
   color: #fff;
 }
-footer .copyright a {
+.footer .copyright a {
   color: #00a7e0;
 }
-footer .copyright a:hover,
-footer .copyright a:focus {
+.footer .copyright a:hover,
+.footer .copyright a:focus {
   color: #337ab7;
 }
 .post-container .page {
@@ -1763,7 +1766,7 @@ footer .copyright a:focus {
   justify-content: center;
   flex-direction: column;
 }
-.page-fullscreen footer {
+.page-fullscreen .footer {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -1771,13 +1774,13 @@ footer .copyright a:focus {
   opacity: 0.6;
   color: #fff;
 }
-.page-fullscreen footer .copyright {
+.page-fullscreen .footer .copyright {
   color: #fff;
 }
-.page-fullscreen footer .copyright a {
+.page-fullscreen .footer .copyright a {
   color: #fff;
 }
-.page-fullscreen footer .copyright a:hover {
+.page-fullscreen .footer .copyright a:hover {
   color: #ddd;
 }
 .MathJax_SVG_Display {

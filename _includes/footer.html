@@ -1,19 +1,21 @@
 <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <!-- SNS Link -->
-                {% include sns-links.html center=true %}
-                <p class="copyright">
-                    Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
-                    <br>
-                    Powered by <a href="https://rujpro.github.io/">Ruj Blog</a>
-                </p>
+<div class="footer">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <!-- SNS Link -->
+                    {% include sns-links.html center=true %}
+                    <p class="copyright">
+                        Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
+                        <br>
+                        Powered by <a href="https://rujpro.github.io/">Ruj Blog</a>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+</div>
 {% include valine.html %}
 {% if page.layout == 'home' %}
 <script src="{{ "/assets/js/canvas.js " | prepend: site.baseurl }}"></script>

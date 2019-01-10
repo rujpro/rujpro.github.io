@@ -144,14 +144,14 @@ img::-webkit-selection {
 }
 #myModal{
   img{max-width: 100%;}
-  .modal-dialog{width: 350px;}
+  .modal-dialog{width: 320px;}
   .modal-body{
     padding: 0px 15px;
     p{font-size: 16px;font-weight: bold;margin-top: 10px;text-align: center}
   }
 }
 @media screen and (max-width: 768px) {
-  #myModal .modal-dialog{margin-left: 20px;}
+  #myModal .modal-dialog{transform: translate(-50%,-50%);top: 50%;left: 50%;}
 }
 .search {
   position: fixed;

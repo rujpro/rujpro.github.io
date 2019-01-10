@@ -22,7 +22,32 @@ type: post
                     </div>
                     <hr>
                     <div class="post-button">
-                        <a class="waves-effect">赏</a>
+                        <a class="waves-effect" data-toggle="modal" data-target="#myModal">赏</a>
+                    </div>
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <p>您的赏识就是我前进的动力</p>
+                                    <ul id="myTab" class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#home" data-toggle="tab">
+                                                    微信支付
+                                            </a>
+                                        </li>
+                                        <li><a href="#tbpay" data-toggle="tab">支付宝支付</a></li>
+                                    </ul>
+                                    <div id="myTabContent" class="tab-content">
+                                        <div class="tab-pane fade in active" id="home">
+                                            <img src="/assets/img/wxpay.jpg" alt="微信扫一扫付款">
+                                        </div>
+                                        <div class="tab-pane fade" id="tbpay">
+                                            <img src="/assets/img/tbpay.jpg" alt="支付宝扫一扫付款">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal -->
                     </div>
                     <!-- 下一文章 -->
                     {% include share.html %}

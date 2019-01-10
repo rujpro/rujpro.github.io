@@ -62,22 +62,18 @@ https://github.com/kitian616/jekyll-TeXt-theme
 				{%- unless forloop.first -%}</section>{%- endunless -%}
 				<section>
 				<span class="fa listing-seperator">
-					<span class="tag-text">{{ _currentdate }}</span>
+					<span class="tag-text"><i class="fa fa-calendar"></i> {{ _currentdate }}</span>
 				</span>
 				{%- assign _date = _currentdate -%}
 			{%- endif -%}
 
-				<div class="post-preview item" data-tags="{{ _tags }}">
+				<div class="item" data-tags="{{ _tags }}">
 				    <a href="{{ _article.url | prepend: site.baseurl }}">
 				        <h2 class="post-title">
                             {{ _article.title }}
 				        </h2>
-				        {% if _article.subtitle %}
-				        <h3 class="post-subtitle">
-				            {{ _article.subtitle }}
-				        </h3>
-				        {% endif %}
-				    </a>
+					</a>
+					<span>{{ _article.date | date: "%Y-%m-%d" }}</span>
 				</div>
 			{% endfor %}
 		</div>

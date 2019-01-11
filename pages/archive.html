@@ -18,7 +18,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			<!-- Tags (as filter) -->
-			<div id='tag_cloud' class="tags tags-sup js-tags">
+			<div id="tag_cloud" class="tags tags-sup js-tags">
 				<a class="tag-button--all bubbly-button">
 					Show All
 					<sup>{{site.posts.size}}</sup>
@@ -35,7 +35,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 				</a>
 				{% endfor %}
 				{% endcapture %}
-        		{{ tags | split:'</a>' | sort | join:'</a>' }}
+        		{{ tags | split:'<a>' | sort | join:'</a>' }}
 			</div>
 
             <!-- Article List -->
@@ -59,8 +59,8 @@ https://github.com/kitian616/jekyll-TeXt-theme
 			{% comment %} group by year {% endcomment %}
 			{%- assign _currentdate = _article.date | date: '%Y' -%}
 			{%- if _currentdate != _date -%}
-				{%- unless forloop.first -%}</section>{%- endunless -%}
-				<section>
+				{%- unless forloop.first -%}<section>{%- endunless -%}
+			</section>
 				<span class="fa listing-seperator">
 					<span class="tag-text"><i class="fa fa-calendar"></i> {{ _currentdate }}</span>
 				</span>

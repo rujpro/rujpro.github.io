@@ -1662,10 +1662,11 @@ code,kbd,pre,samp {
 #tag_cloud .tag.tag-button--all.focus {
   background-color: #e000a8 !important;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   #tag_cloud {
     margin-bottom: 25px;
   }
+  .mini-post-list .item a{font-size: 12px;padding: 7px;}
 }
 .tag-comments {
   font-size: 12px;
@@ -1695,14 +1696,14 @@ code,kbd,pre,samp {
   margin: 20px 0 15px 0;
 }
 .mini-post-list .item{
-  padding: 15px 25px;
+  padding: 15px 0px 15px 43px;
   border-left: 4px solid #00a7e0;
   margin-left: 40px;
 }
 .mini-post-list .item a {
   border-radius: 5px;
   background: #fff;
-  border: 1px solid #00000024;
+  border: 1px solid #5c555524;
   box-shadow: 0 3px 8px -4px #0000001a;
   padding: 10px;
   position: relative;
@@ -1723,15 +1724,18 @@ code,kbd,pre,samp {
   _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
 
-.mini-post-list .item a::after{
+.mini-post-list .item .datetxt {
   position: absolute;
-  content: '';
-  left: -36px;
-  top: 35%;
-  width: 15px;
-  height: 15px;
-  border-radius:20px;
-  background: #bbbbee; 
+  left: -64px;
+  top: 10%;
+  width: 35px;
+  height: 35px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 35px;
+  text-align: center;
+  border-radius:25px;
+  background: #9c85ea;
 }
 
 .mini-post-list .tag-text {

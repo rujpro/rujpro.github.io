@@ -1295,8 +1295,8 @@ code,kbd,pre,samp {
   content: '';
   left: 0;
   top: 100%;
-  border-top: o solid transparent;
-  border-left: o solid transparent;
+  border-top: 0 solid transparent;
+  border-left: 0 solid transparent;
   border-bottom: 1em solid transparent;
   border-right: 1em solid #00617f;
 }
@@ -1635,7 +1635,7 @@ code,kbd,pre,samp {
   line-height: 28px;
   margin: 0 2px;
   margin-bottom: 8px;
-  background: #f3f5f5;
+  background: #bbbbee;
 }
 #tag_cloud a:hover,
 #tag_cloud .tag:hover,
@@ -1652,7 +1652,7 @@ code,kbd,pre,samp {
 #tag_cloud a.tag-button--all,
 #tag_cloud .tag.tag-button--all {
   font-weight: 700;
-  color: #00a7e0!important;
+  color: #fff!important;
 }
 #tag_cloud a.tag-button--all:hover,
 #tag_cloud .tag.tag-button--all:hover,
@@ -1660,7 +1660,7 @@ code,kbd,pre,samp {
 #tag_cloud .tag.tag-button--all:active,
 #tag_cloud a.tag-button--all.focus,
 #tag_cloud .tag.tag-button--all.focus {
-  background-color: #e4e4e4 !important;
+  background-color: #e000a8 !important;
 }
 @media only screen and (min-width: 768px) {
   #tag_cloud {
@@ -1695,25 +1695,48 @@ code,kbd,pre,samp {
   margin: 20px 0 15px 0;
 }
 .mini-post-list .item{
-  padding: 0px 40px 20px;
+  padding: 15px 25px;
+  border-left: 4px solid #00a7e0;
+  margin-left: 40px;
 }
-.mini-post-list .item>a>.post-title {
-  font-size: 18px;
-  line-height: 1.3;
+.mini-post-list .item a {
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #00000024;
+  box-shadow: 0 3px 8px -4px #0000001a;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
 }
-.mini-post-list .item>a .post-title {
-  font-size: 16px;
-  font-weight: 800;
-  margin-top: 20px;
-  text-align: left;
+.mini-post-list .item a::before{
+  position: absolute;
+  content: '';
+  left: -15px;
+  top: 34.5%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 15px 7.5px 0;
+  border-color: transparent #fff transparent transparent;
+  line-height: 0px;
+  _border-color: #000000 #fff #000000 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
+
+.mini-post-list .item a::after{
+  position: absolute;
+  content: '';
+  left: -36px;
+  top: 35%;
+  width: 15px;
+  height: 15px;
+  border-radius:20px;
+  background: #bbbbee; 
+}
+
 .mini-post-list .tag-text {
   font-weight: 200;
   line-height: 1.7;
-}
-.mini-post-list .item>a>.post-subtitle {
-  font-size: 14px;
-  font-weight: normal;
 }
 .affix{
   width: 18%;

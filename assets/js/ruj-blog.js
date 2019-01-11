@@ -15,7 +15,7 @@ function async(u, c) {
 // <!-- canvas + h5 + webgl 水波纹效果 -->
 $(document).ready(function () {
     try {
-        $('.intro-header,.home').ripples({
+        $('.intro-header').ripples({
             resolution: 512,
             dropRadius: 20, //px
             perturbance: 0.04,

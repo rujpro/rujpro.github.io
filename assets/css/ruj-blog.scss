@@ -81,7 +81,7 @@ img::-webkit-selection {
   display: block;
   width: 1.5em;
   height: 0.5em;
-  left: 0.3em;
+  left: 0.27em;
   bottom: -0.5em;
   border-radius: 100%;
   content: "";
@@ -710,6 +710,7 @@ pre>code {
 // }
 .home{
   background: #000;
+  overflow: hidden;
 }
 .home .fa-circle{
   color: #00a7e0;
@@ -754,7 +755,7 @@ pre>code {
   -webkit-animation: fade-in 1s;
   position:fixed;
   left:0px;
-  top:2%;
+  top:0;
   transform: scale(0,0);
   transition-property:width height;
   transition-duration:2s;
@@ -801,6 +802,12 @@ img#logo {
 }
 @media screen and (max-width: 768px) {
   .canvas{display: none;}
+  img#logo{width: 85px;}
+  .home-title{
+    margin: -100px auto auto -150px !important;
+    h1 {font-size: 40px !important;}
+    span{font-size: 20px !important;}
+  }
   #ruj-wrap {transform: scale(1,1);}
   .home .navbar-header{display: block;}
   .welcome-signboard {
@@ -920,8 +927,7 @@ img#logo {
   left: 50%;
   top: 50%;
   text-align: center;
-  height: 200px;
-  margin: -100px auto auto -150px;
+  margin: -150px auto auto -150px;
   h1{font-size: 60px;}
   span{font-size: 26px;}
 }

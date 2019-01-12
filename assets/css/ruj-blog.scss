@@ -4,22 +4,11 @@
  * Ruj Blog v1.0.0 (http://rujpro.github.io)
  * Copyright 2018 Ruj <luckyerchen@gmail.com>
  */
- * { margin: 0; padding: 0; }
- html {
-   height: 100%;
-   -webkit-backface-visibility: hidden;
-   -webkit-transform-origin: top;
-   -moz-transform-origin: top;
-   -ms-transform-origin: top;
-   -o-transform-origin: top;
-   transform-origin: top;
-   -webkit-transition: all .75s ease;
-   -moz-transition: all .75s ease;
-   -o-transition: all .75s ease;
-   -ms-transition: all .75s ease;
-   transition: all .75s ease;
- }
- body {
+ * { 
+  margin: 0; padding: 0;  
+}
+html{height: 100%;}
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   font-size: 14px;
@@ -75,6 +64,41 @@ img::-webkit-selection {
   color: white;
   background: transparent;
 }
+.float {
+  animation: float 4s infinite ease-in-out alternate;
+}
+@keyframes float {
+  from,
+  to {
+      transform: transofrmY(0);
+  }
+  50% {
+      transform: translateY(4px);
+  }
+}
+.shadow:after {
+  position: absolute;
+  display: block;
+  width: 1.5em;
+  height: 0.5em;
+  left: 0.3em;
+  bottom: -0.5em;
+  border-radius: 100%;
+  content: "";
+  animation: zoom 4s ease-in-out infinite alternate;
+}
+@keyframes zoom {
+  from,
+  to {
+      background-color: rgba(170, 178, 189, 0.3);
+      transform: scale(.6) rotate(0.01deg);
+  }
+  50% {
+      background-color: rgba(170, 178, 189, 0.6);
+      transform: scale(.8) rotate(0.01deg);
+  }
+}
+
 // seach css
 .main-wrap {
   display: flex;
@@ -677,22 +701,24 @@ pre>code {
 		background-position: 500px 500px, 1000px 500px;
 	}
 }
+// .home{
+//   background: url('/assets/img/123.jpg') no-repeat;
+//   height: 100%;
+//   // background: linear-gradient(120deg, #cd4646, #ef6767);
+//   background-size: cover;
+//   background-position: 50% 0;
+// }
 .home{
-  background: url('/assets/img/123.jpg') no-repeat;
-  height: 100%;
-  // background: linear-gradient(120deg, #cd4646, #ef6767);
-  background-size: cover;
-  background-position: 50% 0;
+  background: #000;
+}
+.home .fa-circle{
+  color: #00a7e0;
 }
 .home #btn-search,
 .home .footer {
   display: none;
 }
-.ruj-wrap{
-  background:rgba(0, 0, 0, .5);
-  width: 100%;
-  height: 100%;
-}
+
 .home .navbar-header{display: none;}
 .error {
   display: none;
@@ -714,18 +740,55 @@ pre>code {
 	animation: 10s snow linear infinite;
 	pointer-events: none;
 }
-// canvas spider show
-.spiderbox{
-  position: fixed;
-  top: 0;
-  left: 500px;
-  width: 400px;
-  height: 200px;
-  z-index: 9999;
-  overflow: hidden;
-  canvas{width: 100%;height: 100%;}
+/*.body--ready {
+  background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+}*/
+#ruj-wrap {
+text-align: center;
+animation: fade-in;
+animation-duration: 1s;
+-webkit-animation: fade-in 1s;
+position:fixed;
+left:0px;
+top:2%;
+transform: scale(0,0);
+transition-property:width height;
+transition-duration:2s;
+transition-delay:0.8s;
+width: 100%;
+height: 100%;
 }
-
+.canvas {
+margin: 0 auto;
+display: block;
+width: 100%;
+}
+img#logo {
+width: 128px;
+background-size: cover;
+border-radius: 200px;
+box-shadow: 0px 0px 40px rgb(255, 255, 255);
+border: 3px solid rgba(255, 255, 255, 0.61);
+opacity: 1;
+margin: 0 auto;
+margin-top: 20px;
+margin-bottom: 20px;
+transition: all 1.0s;  
+}
+#logo:hover {
+box-shadow: 0 0 10px #fff;
+-webkit-box-shadow: 0 0 19px #fff;
+transform:rotate(360deg);
+-ms-transform:rotate(360deg); 	/* IE 9 */
+-moz-transform:rotate(360deg); 	/* Firefox */
+-webkit-transform:rotate(360deg); /* Safari ºÍ Chrome */
+-o-transform:rotate(360deg); 	/* Opera */
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
 // welcome home Ruj start
 .welcome-signboard {
   width: 380px;
@@ -738,6 +801,8 @@ pre>code {
   animation: 1s init, 0.7s aa 1s, 3s ab 1.7s infinite;
 }
 @media screen and (max-width: 768px) {
+  .canvas{display: none;}
+  #ruj-wrap {transform: scale(1,1);}
   .home .navbar-header{display: block;}
   .welcome-signboard {
     height: 162px;
@@ -1231,9 +1296,10 @@ code,kbd,pre,samp {
 .intro-header .site-heading {
   padding: 150px 0;
   color: #fff;
-}
-.intro-header .site-heading {
   text-align: center;
+}
+.intro-header .site-heading,.post-badge,.side-friends,.side-tag,.side-about,.post-animation,.footer{
+  perspective: 800px;
 }
 .intro-header .site-heading h1 {
   margin-top: 0;
@@ -1520,7 +1586,7 @@ code,kbd,pre,samp {
 .footer .copyright {
   font-size: 14px;
   text-align: center;
-  margin: 10px auto auto 0;
+  margin: 20px auto auto 0;
   color: #fff;
 }
 .footer .copyright a {

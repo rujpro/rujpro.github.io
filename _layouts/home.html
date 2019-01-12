@@ -3,14 +3,12 @@
 {% include head.html %}
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="home">
-    <div class="ruj-wrap">
+    <canvas class="canvas" width="100%" height="100%"></canvas>
+    <script src="{{ "/assets/js/Seffects.js " | prepend: site.baseurl }}" type="text/javascript"></script>
+    <div id="ruj-wrap">
         {% include nav.html %}
         <!-- snow actions -->
         <div id="snowMask"></div>
-        <!--canvas spider show-->
-        <div class="spiderbox">
-            <canvas id="spider"></canvas>
-        </div>
         <!-- home Container -->
         <div class="container">
             <div class="row">

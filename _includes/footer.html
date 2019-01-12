@@ -17,15 +17,13 @@
     </footer>
 </div>
 {% include valine.html %}
-{% if page.layout == 'home' %}
-<script src="{{ "/assets/js/canvas.js " | prepend: site.baseurl }}"></script>
-{% endif %}
 <!-- Bootstrap Core JavaScript -->
 <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script>
 $(function () { $("[data-toggle='tooltip']").tooltip(); });
 </script>
 <!-- Custom Theme JavaScript -->
+<script src="https://cdn.bootcss.com/scrollReveal.js/4.0.5/scrollreveal.min.js"></script>
 <script src="{{ "/assets/js/ruj-blog.js " | prepend: site.baseurl }}"></script>
 <!-- canvas + h5 + webgl 水波纹效果 -->
 <script src="{{ "/assets/js/lib/jquery.ripples.min.js " | prepend: site.baseurl }}"></script>

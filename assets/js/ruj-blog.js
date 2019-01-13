@@ -96,7 +96,7 @@ $(document).ready(function() {
 ScrollReveal({reset: false,scale: 0.75,duration: 1000,interval: 600,distance: '50px'});
 ScrollReveal().reveal('.intro-header,#tag_cloud', {origin: 'top',delay: 0,rotate:{ x: 65}});
 ScrollReveal().reveal('.navbar-brand', {origin: 'left',delay: 300});
-ScrollReveal().reveal('.nav', {origin: 'right',delay: 500});
+ScrollReveal().reveal('.navbar-nav', {origin: 'right',delay: 500});
 ScrollReveal().reveal('.side-friends,.side-tag,.side-about,.aplayer', {origin: 'right',delay: 500,rotate: { x: 65}});
 ScrollReveal().reveal('.post-badge', {origin: 'left',delay: 600,rotate: { z:65}});
 ScrollReveal().reveal('.post-animation', {origin: 'bottom',delay: 500,rotate:{ x: 65}});
@@ -108,3 +108,4 @@ ScrollReveal().reveal('.page-about,.footer,.mini-post-list', {origin: 'bottom',d
 //     el.classList.remove('is-animating');
 //     el.classList.add('is-visible');
 // }
+console.log("恭喜客官喜提彩蛋，请尊重下劳动成果(⊙o⊙)哦 \n客官不用这么费劲窥视本博代码 \n源码已上传至GitHub \n客官Fork代码时记得帮忙点下⭐️star感谢！\n⬇️面是仓库地址 \n%c %c %c Ruj Blog -  %c  %c  https://github.com/rujpro/rujpro.github.io  %c %c ♥%c♥%c♥ ", "background: #ff66a5", "background: #ff66a5", "color: #ff66a5; background: #030307;", "background: #ff66a5", "background: #ffc3dc", "background: #ff66a5", "color: #ff2424; background: #fff", "color: #ff2424; background: #fff", "color: #ff2424; background: #fff");

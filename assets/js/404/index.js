@@ -74,24 +74,13 @@ var renderer = new PIXI.autoDetectRenderer(options.width, options.height, {
 var stage = new PIXI.Stage("0X000000", true);
 document.body.appendChild(renderer.view);
 renderer.view.id = "notFound";
-
-
-
-
-
-
-
 var imageData = false;
 var particles =[]; 
-
-
 function init() {
     positionParticles();
     positionText();
 }
-
 function positionParticles() {
-
     var canvas = document.createElement("canvas");
     canvas.width = 500;
     canvas.height = 350;
@@ -217,7 +206,23 @@ function update() {
     }
   window.requestAnimationFrame(update);
 }
-
 init();
+update();
 
-update()
+(function(){
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+        return (false);
+    }
+    var tips = getQueryVariable("tips");
+    var tipsbtn = document.getElementById("tipsbtn");
+    console.log("恭喜客官喜提彩蛋，请尊重下劳动成果(⊙o⊙)哦 \n客官不用这么费劲窥视本博代码 \n源码已上传至GitHub \n客官Fork代码时记得帮忙点下⭐️star感谢！\n⬇️面是仓库地址 \n%c %c %c Ruj Blog -  %c  %c  https://github.com/rujpro/rujpro.github.io  %c %c ♥%c♥%c♥ ", "background: #ff66a5", "background: #ff66a5", "color: #ff66a5; background: #030307;", "background: #ff66a5", "background: #ffc3dc", "background: #ff66a5", "color: #ff2424; background: #fff", "color: #ff2424; background: #fff", "color: #ff2424; background: #fff");
+    if (tips) tipsbtn.style.display = "none";
+})();

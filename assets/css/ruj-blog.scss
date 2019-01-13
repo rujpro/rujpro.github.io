@@ -797,25 +797,31 @@ img#logo {
   top: 0px;
   left: 100px;
   z-index: 99;
+  display: none;
   transform: scale(1) rotatez(7deg) translate(-17px, 1px);
   animation: 1s init, 0.7s aa 1s, 3s ab 1.7s infinite;
+}
+.home .nav{
+  transform: scale(1,1) !important;
+  display: none;
 }
 @media screen and (max-width: 768px) {
   .canvas{display: none;}
   img#logo{width: 85px;}
   .home-title{
-    margin: -100px auto auto -150px !important;
+    margin: -80px auto auto -150px !important;
     h1 {font-size: 40px !important;}
     span{font-size: 20px !important;}
   }
   #ruj-wrap {transform: scale(1,1);}
-  .home .navbar-header{display: block;}
+  .home .navbar-header,.home .nav{display: block;}
   .welcome-signboard {
     height: 162px;
     width: 238px;
     top: 50px;
     left: 80px;
     z-index: 0;
+    display: none;
     .pin{width: 15px;height: 15px;}
     .sign{
       font-size: 30px;
@@ -1482,7 +1488,7 @@ code,kbd,pre,samp {
   text-align: center;
 }
 
-.post-preview .post-button a.bubbly-button {
+a.bubbly-button {
   font-family: 'Helvetica', 'Arial', sans-serif;
   display: inline-block;
   font-size: 1em;
@@ -1714,7 +1720,7 @@ code,kbd,pre,samp {
 #tag_cloud .tag:active,
 #tag_cloud a.focus,
 #tag_cloud .tag.focus {
-  background-color: #00a7e0 !important;
+  background-color: #ff0081 !important;
 }
 #tag_cloud a.focus,
 #tag_cloud .tag.focus {
@@ -1731,7 +1737,7 @@ code,kbd,pre,samp {
 #tag_cloud .tag.tag-button--all:active,
 #tag_cloud a.tag-button--all.focus,
 #tag_cloud .tag.tag-button--all.focus {
-  background-color: #e000a8 !important;
+  background-color: #ff0081 !important;
 }
 @media screen and (max-width: 768px) {
   #tag_cloud {

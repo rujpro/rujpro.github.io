@@ -118,7 +118,6 @@ S.UI = (function () {
             current = sequence.shift();
             action = getAction(current);
             value = getValue(current);
-
             switch (action) {
                 case 'countdown':
                     value = parseInt(value) || 10;
@@ -129,23 +128,20 @@ S.UI = (function () {
                             if (sequence.length === 0) {
                                 S.Shape.switchShape(S.ShapeBuilder.letter(''));
                                 document.getElementById("ruj-wrap").style.transform = "scale(1,1)";
-
+                                document.getElementById("welcome").style.display = "block";
+                                document.getElementById("homenav").style.display = "block";
+                                document.getElementById("homenav").style.opacity = "1";
                             } else {
                                 performAction(sequence);
-
                             }
                         } else {
                             S.Shape.switchShape(S.ShapeBuilder.letter(index), true);
-
                         }
                     }, 1000, value, true);
-
                     break;
-
                 case 'rectangle':
                     value = value && value.split('x');
                     value = (value && value.length === 2) ? value : [maxShapeSize, maxShapeSize / 2];
-
                     S.Shape.switchShape(S.ShapeBuilder.rectangle(Math.min(maxShapeSize, parseInt(value[0])), Math.min(maxShapeSize, parseInt(value[1]))));
                     break;
 
@@ -325,7 +321,7 @@ S.ShapeBuilder = (function () {
     var gap = 13,
         shapeCanvas = document.createElement('canvas'),
         shapeContext = shapeCanvas.getContext('2d'),
-        fontSize = 500,
+        fontSize = 400,
         fontFamily = 'Avenir, Helvetica Neue, Helvetica, Arial, sans-serif';
 
     function fit() {

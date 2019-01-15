@@ -101,11 +101,59 @@ ScrollReveal().reveal('.side-friends,.side-tag,.side-about,.aplayer', {origin: '
 ScrollReveal().reveal('.post-badge', {origin: 'left',delay: 600,rotate: { z:65}});
 ScrollReveal().reveal('.post-animation', {origin: 'bottom',delay: 500,rotate:{ x: 65}});
 ScrollReveal().reveal('.site-heading', {origin: 'top',rotate: { x: 65},delay: 800});
-ScrollReveal().reveal('.page-about,.footer,.mini-post-list', {origin: 'bottom',delay: 500,rotate:{ x: 65}});
+ScrollReveal().reveal('.page-about,.mini-post-list,.footer', {origin: 'bottom',delay: 500,rotate:{ x: 65}});
 // ScrollReveal().destroy(); //禁止所有动画
 // ScrollReveal().reveal('#example', { afterReveal: myCallback });
 // function myCallback (el) {
 //     el.classList.remove('is-animating');
 //     el.classList.add('is-visible');
 // }
-console.log("恭喜客官喜提彩蛋，请尊重下劳动成果(⊙o⊙)哦 \n客官不用这么费劲窥视本博代码 \n源码已上传至GitHub \n客官Fork代码时记得帮忙点下⭐️star感谢！\n⬇️面是仓库地址 \n%c %c %c Ruj Blog -  %c  %c  https://github.com/rujpro/rujpro.github.io  %c %c ♥%c♥%c♥ ", "background: #ff66a5", "background: #ff66a5", "color: #ff66a5; background: #030307;", "background: #ff66a5", "background: #ffc3dc", "background: #ff66a5", "color: #ff2424; background: #fff", "color: #ff2424; background: #fff", "color: #ff2424; background: #fff");
+
+// 禁止右键粘贴复制保存
+// function fuckyou() {
+//     window.close();
+//     window.location = "/404.html?tips=false";
+// }
+// function ck() {
+//     // console.profile();
+//     // console.profileEnd();
+//     if (console.clear) {
+//         console.log("恭喜客官喜提彩蛋，请尊重下劳动成果(⊙o⊙)哦 \n客官不用这么费劲窥视本博代码 \n源码已上传至GitHub \n客官Fork代码时记得帮忙点下⭐️star感谢！\n⬇️面是仓库地址 \n%c %c %c Ruj Blog -  %c  %c  https://github.com/rujpro/rujpro.github.io  %c %c ♥%c♥%c♥ ", "background: #ff66a5", "background: #ff66a5", "color: #ff66a5; background: #030307;", "background: #ff66a5", "background: #ffc3dc", "background: #ff66a5", "color: #ff2424; background: #fff", "color: #ff2424; background: #fff", "color: #ff2424; background: #fff");
+//     };
+//     if (typeof console.profiles == "object") {
+//         return console.profiles.length > 0;
+//     }
+// }
+// ck();
+// function hehe() {
+//     if ((window.console && (console.firebug || console.table && /firebug/i.test(console.table()))) || (typeof opera == 'object' && typeof opera.postError == 'function' && console.profile.length > 0)) {
+//         fuckyou();
+//     }
+//     if (typeof console.profiles == "object" && console.profiles.length > 0) {
+//         fuckyou();
+//     }
+// }
+// hehe();
+// window.onresize = function() {
+//     if ((window.outerWidth - window.innerWidth) > 200 || (window.outerHeight - window.innerHeight) > 200) {
+//         fuckyou();
+//     }
+// };
+// document.onkeydown = function(event) {
+//     if ((event.ctrlKey) && (event.keyCode == 115 || event.keyCode == 83 || event.keyCode == 46)) {
+//         event.returnValue = false;
+//         return false;
+//     }
+// };
+// document.oncontextmenu = function(event) {
+//     event.returnValue = false;
+// };
+// document.onselectstart = function(event) {
+//     event.returnValue = false;
+// };
+// document.oncopy = function(event) {
+//     event.returnValue = false;
+// };
+// // document.onkeydown = function(event){
+// //     alert(event.keyCode);
+// // }

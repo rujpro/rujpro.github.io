@@ -3,6 +3,9 @@
 {% include head.html %}
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="home">
+    <noscript> 
+        <iframe src="*.htm"></iframe> 
+    </noscript> 
     <canvas class="canvas" width="100%" height="100%"></canvas>
     <script src="{{ "/assets/js/Seffects.js " | prepend: site.baseurl }}" type="text/javascript"></script>
     {% include nav.html %}

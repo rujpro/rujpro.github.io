@@ -1,6 +1,6 @@
 /*!
- * crj Blog v1.0.0 (http://rujpro.github.io)
- * Copyright 2018 crj luckyerchen@gmail.com
+ * Ruj Blog v1.0.0 (http://rujpro.github.io)
+ * Copyright 2018 Ruj luckyerchen@gmail.com
  */
 //<!-- async load function -->
 function async(u, c) {
@@ -93,15 +93,15 @@ $(document).ready(function() {
     }
 });
 // 滚动动画js
-ScrollReveal({reset: false,scale: 0.75,duration: 1000,interval: 600,distance: '50px'});
-ScrollReveal().reveal('.intro-header,#tag_cloud', {origin: 'top',delay: 0,rotate:{ x: 65}});
-ScrollReveal().reveal('.navbar-brand', {origin: 'left',delay: 300});
-ScrollReveal().reveal('.navbar-nav', {origin: 'right',delay: 500});
-ScrollReveal().reveal('.side-friends,.side-tag,.side-about,.aplayer', {origin: 'right',delay: 500,rotate: { x: 65}});
-ScrollReveal().reveal('.post-badge', {origin: 'left',delay: 600,rotate: { z:65}});
-ScrollReveal().reveal('.post-animation', {origin: 'bottom',delay: 500,rotate:{ x: 65}});
-ScrollReveal().reveal('.site-heading', {origin: 'top',rotate: { x: 65},delay: 800});
-ScrollReveal().reveal('.page-about,.mini-post-list,.footer', {origin: 'bottom',delay: 500,rotate:{ x: 65}});
+// ScrollReveal({reset: false,scale: 0.75,duration: 1000,interval: 600,distance: '50px'});
+// ScrollReveal().reveal('.intro-header,#tag_cloud', {origin: 'top',delay: 0,rotate:{ x: 65}});
+// ScrollReveal().reveal('.navbar-brand', {origin: 'left',delay: 300});
+// ScrollReveal().reveal('.navbar-nav', {origin: 'right',delay: 500});
+// ScrollReveal().reveal('.side-friends,.side-tag,.side-about,.aplayer', {origin: 'right',delay: 500,rotate: { x: 65}});
+// ScrollReveal().reveal('.post-badge', {origin: 'left',delay: 600,rotate: { z:65}});
+// ScrollReveal().reveal('.post-animation', {origin: 'bottom',delay: 500,rotate:{ x: 65}});
+// ScrollReveal().reveal('.site-heading', {origin: 'top',rotate: { x: 65},delay: 800});
+// ScrollReveal().reveal('.page-about,.mini-post-list,.footer', {origin: 'bottom',delay: 500,rotate:{ x: 65}});
 // ScrollReveal().destroy(); //禁止所有动画
 // ScrollReveal().reveal('#example', { afterReveal: myCallback });
 // function myCallback (el) {

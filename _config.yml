@@ -2,10 +2,10 @@
 title: Ruj Blog
 SEOTitle: 陈锐军的博客 | Ruj Blog
 email: luckyerchen@gmail.com
-header-img: assets/img/home-bg.jpg
+header-img: /assets/img/home-bg.jpg
 description: "关于程序与设计、黑客与画家 | Ruj，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @陈锐军 的个人博客，与你一起发现更大的世界。"
 keyword: "陈锐军, chenruijun, 博客, Blog, 个人博客, 个人网站, 互联网, Web, JavaScript, web前端, 设计, 全栈, 前端开发"
-url: "https://rujpro.github.io/"              # your host, for absolute URL
+url: "https://rujpro.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 collections:

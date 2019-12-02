@@ -9,7 +9,7 @@
                     <p class="copyright">
                         Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
                         <br>
-                        Powered by <a href="https://rujpro.github.io/">Ruj Blog</a>
+                        Powered by <a href="https://rujpro.github.io/blog/">Ruj Blog</a>
                     </p>
                 </div>
             </div>
@@ -24,9 +24,9 @@ $(function () { $("[data-toggle='tooltip']").tooltip(); });
 </script>
 <!-- Custom Theme JavaScript -->
 <!-- <script src="https://cdn.bootcss.com/scrollReveal.js/4.0.5/scrollreveal.min.js"></script> -->
-<script src="{{ "/assets/js/ruj-blog.js " | prepend: site.baseurl }}"></script>
+<script src="{{ '/assets/js/ruj-blog.js' | prepend: site.baseurl }}"></script>
 <!-- canvas + h5 + webgl 水波纹效果 -->
-<script src="{{ "/assets/js/lib/jquery.ripples.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ '/assets/js/lib/jquery.ripples.min.js' | prepend: site.baseurl }}"></script>
 {% if page.title == 'Archive' %}
 <!-- jquery.tagcloud.js -->
 <script>
@@ -38,7 +38,7 @@ $(function () { $("[data-toggle='tooltip']").tooltip(); });
         $('#tag_cloud a').tagcloud();
     })
 </script>
-<script src='{{ "/assets/js/archive.js " | prepend: site.baseurl }}'></script>
+<script src='{{ "/assets/js/archive.js" | prepend: site.baseurl }}'></script>
 {% endif %}
 <!--fastClick.js -->
 <script>

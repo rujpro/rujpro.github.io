@@ -267,7 +267,7 @@ img::-webkit-selection {
 }
 
 .main-wrap--move {
-  transform: perspective(1000px) translate3d(0, 50vh, 0) rotate3d(1, 0, 0, 30deg);
+  transform: perspective(1000px) translate3d(0, 50vh, 0) rotate3d(1, 0, 0, 10deg);
 }
 
 .search {
@@ -1028,9 +1028,9 @@ code,kbd,pre,samp {
   line-height: 1.4;
 }
 .post-content h5 {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 600;
-  color: gray;
+  // color: gray;
 }
 .post-content h5 + p {
   margin-top: 5px;
@@ -1038,7 +1038,7 @@ code,kbd,pre,samp {
 .post-content h6 {
   font-size: 16px;
   font-weight: 600;
-  color: gray;
+  // color: gray;
 }
 .post-content h6 + p {
   margin-top: 5px;
